@@ -1,0 +1,58 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 300px;
+    height: 63px;
+    border-radius: 5px;
+    margin: 100px auto;
+    color: #f1f1f1;
+    background: rgb(103, 75, 224);
+    transition: height 0.4s ease-in-out;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.drop-btn {
+    padding: 20px;
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(118, 91, 240);
+    color: #f1f1f1;
+    cursor: pointer;
+    border-radius:  5px;
+}
+
+.drop-down ul {
+    list-style: none;
+    font-size: 25px;
+}
+
+.drop-down ul li {
+    padding: 5px 5px 5px 25px;
+}
+
+.drop-down ul li:nth-child(3) {
+    padding-bottom: 15px;
+}
+
+.drop-down ul li a {
+    color: #f1f1f1;
+    text-decoration:  none;
+}
+
+.drop-down ul li a:hover {
+    color: #ffffff;
+}
