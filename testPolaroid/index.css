@@ -1,0 +1,59 @@
+html {
+  font-size: 62.5%;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  padding: 0 100px;
+  background-image: linear-gradient(black, rgb(29, 29, 29));
+  height: 1000vh;  
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart {
+    width: 10px;
+}
+
+.red {
+    height: 90vh;
+    background: red;
+}
+.blue {
+    height: 200vh;
+    background: blue;
+}
+.purple {
+    height: 115vh;
+    background: purple;
+}
+.pink {
+    height: 70vh;
+    background: pink;
+}
+.green {
+    height: 260vh;
+    background: green;
+}
+.greenYellow {
+    height: 210vh;
+    background: greenyellow;
+}
+.white {
+    height: 300vh;
+    background: white;
+}
+.yellow {
+    height: 160vh;
+    background: yellow;
+}

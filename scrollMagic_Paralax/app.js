@@ -12,8 +12,6 @@ var scene = new ScrollMagic.Scene({
 })
 .addTo(controller)
 
-var controller2 = new ScrollMagic.Controller();
-
 var scene2 = new ScrollMagic.Scene({
     triggerElement: '.box2',
     reverse: false
@@ -24,9 +22,7 @@ var scene2 = new ScrollMagic.Scene({
     indent: 200,
     colorStart: '#fff'
 })
-.addTo(controller2)
-
-var controller3 = new ScrollMagic.Controller();
+.addTo(controller)
 
 var scene3 = new ScrollMagic.Scene({
     triggerElement: '.box3',
@@ -38,4 +34,4 @@ var scene3 = new ScrollMagic.Scene({
     indent: 200,
     colorStart: '#fff'
 })
-.addTo(controller3)
+.addTo(controller)
