@@ -1,0 +1,48 @@
+* {
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 600%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+
+
+.panel {
+  width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    overflow-x: hidden;
+    
+    
+    user-select: none;
+}
+
+.gold {
+  background: gold;
+}
+
+.cyan {
+  background: cyan;
+}
+
+.orangered {
+  background: orangered;
+}
+
+.plum {
+  background: plum;
+}
