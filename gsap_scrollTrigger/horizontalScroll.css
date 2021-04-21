@@ -3,32 +3,35 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
 .container {
-  width: 600%;
+  width: 400vw;
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: hidden;
 }
 
 
 .panel {
   width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10rem;
-    overflow-x: hidden;
-    
-    
-    user-select: none;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;
+  overflow-x: hidden;
+  
+  
+  user-select: none;
 }
 
 .gold {
