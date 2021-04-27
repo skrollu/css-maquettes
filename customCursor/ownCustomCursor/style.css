@@ -43,7 +43,7 @@ body{
 .expand {
   animation: expand 0.5s;
   background: crimson;
-  /* border: 1px solid crimson; */
+  border: 1px solid crimson;
 }
 
 @keyframes spin {
