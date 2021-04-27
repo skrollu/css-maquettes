@@ -1,0 +1,41 @@
+* {
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    width: 100%;
+    height: 400vh;
+}
+
+.panel {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+
+    user-select: none;
+}
+
+.gold {
+    background: gold;
+}
+
+.cyan {
+    background: cyan;
+}
+
+.orangered {
+    background: orangered;
+}
+
+.plum {
+    background: plum;
+}

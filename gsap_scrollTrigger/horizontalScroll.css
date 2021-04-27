@@ -28,8 +28,6 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 10rem;
-  overflow-x: hidden;
-  
   
   user-select: none;
 }
