@@ -35,6 +35,26 @@ section {
   font-size: 8rem;
 }
 
+@media screen and (max-width: 1700px)
+{
+  .title {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (max-width: 1500px)
+{
+  .title {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 800px)
+{
+  .title {
+    font-size: 3rem;
+  }
+}
 .title h1 span{
   display: inline-block;
 }

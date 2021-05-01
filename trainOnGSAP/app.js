@@ -12,11 +12,11 @@ const four = gsap.fromTo(".four",
             { x: -300}, 
             { duration: 4, delay: 1, x: 300, y: -300, ease: "power4.inOut"})    */         
 
-const box = gsap.fromTo(".box",
+/* const box = gsap.fromTo(".box",
         { opacity: 0}, 
         { duration: 2, opacity: 1, height: 75, width: 75, y: -300, repeat: 1, yoyo: true, stagger: 0.1,
             onComplete: boxCompleted, onCompleteParams:["coucou je suis un parametre"],
-            onStart: (/* params */) => {
+            onStart: ( params ) => {
                 //console.log(params)
                 console.log("This doesn't work within arrow functions because of how arrow functions are scoped so make sure to use a regular function if you need access to the targets. ")
                 console.log("ici this créé une erreur", this.duration())
@@ -31,7 +31,7 @@ function boxCompleted(param) {
 
 console.log("Lanimation de two dur: " , two.duration())
 two.duration(3);
-console.log("Lanimation de two dur: " , two.duration())
+console.log("Lanimation de two dur: " , two.duration()) */
 /* 
 const tl = gsap.timeline({
     repeat: 2,
@@ -56,3 +56,16 @@ tl.fromTo(".red", {x: -500, y:-300}, {duration: 1, x: 500, y: 300})
 console.log("la timeline dure: ",  tl.duration())
 
      */
+
+const timeline = gsap.timeline();
+timeline.fromTo(".box", {x: 0}, {x: 100, y: 500})
+
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.create({
+    animation: timeline,
+    trigger: ".container",
+    start: "bottom bottom",
+    markers: true, 
+    scrub: true
+})
+

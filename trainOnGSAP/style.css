@@ -8,6 +8,10 @@ html {
   font-size: 62.5%;
 }
 
+section {
+  height: 100vh;
+}
+
 .container {
   background: linear-gradient(black, rgb(36, 36, 36));
   height: 100vh;
