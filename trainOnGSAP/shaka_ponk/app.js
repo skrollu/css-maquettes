@@ -31,7 +31,7 @@ const timeline = gsap.timeline({
 })
 
 timeline.to('.social-network', { y: -400 })
-  .to('.blur', { y: -250 }, "<")
+  .to('.blur', { y: -550 }, "<")
 
 for (let i = 0; i < letters1.length; i++) {
   timeline.to(`.shaka${i + 1}`, {

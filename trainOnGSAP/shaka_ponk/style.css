@@ -64,7 +64,7 @@ section {
   width: 150%;
   margin-left: -10%;
   bottom: -35vh;
-  height: 70vh;
+  height: 50vh;
   background-color: rgb(0, 0, 0);
   filter: blur(20px);
   z-index: 1000;
