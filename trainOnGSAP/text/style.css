@@ -8,6 +8,15 @@ html {
   font-size: 62.5%;
 }
 
+section {
+  position: relative;
+  height: 100vh;
+}
+
+section:nth-child(1) {
+  background: rgb(48, 48, 48);
+}
+
 .container {
   position: absolute;
   left: 50%;
@@ -15,8 +24,26 @@ html {
   transform: translate(-50%, -50%);
 }
 
-.container h1 {
-  font-size: 3rem;
+.container:nth-child(1)  h1{
+  overflow: hidden;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 6rem;
+} 
+
+.container:nth-child(1)  h1 .hi-box {
+  position: relative;
+  display: inline-block;
+}
+
+.container h1:nth-child(1) .box {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  height: 1rem;
+  width: 17rem;
+  z-index: -1;
+  background-color: rgb(0, 255, 149);
 }
 
 .normal {
