@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:700|Poppins"> -->
+    <!-- GSAP: Contain Tween and Timeline -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+    integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+    crossorigin="anonymous"></script>
+    <title>Animated buttons</title>
+</head>
+<body>
+    
+    <button class="btn">
+        <!-- A lorigine viewBox vallait min-x 0 min-y 0 width 120 width 120 Le viewport du svg équivalaient à la taille du svg ce qui coupait le circle dont le stroke  dépasssait
+            pour corriger cela on a déplacer le viewport de 10 vers le haut à gauche puis agrandit de 20 en hauteur/largeur ce qui laisse plus de place à notre svg de taille 120/120
+            pour etre dessiner et n'est donc plus coupé.
+        -->
+        <svg 
+        width="120"
+        height="120" 
+        viewBox="-10 -10 140 140" 
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="59.5" class="bg-svg" />
+        <circle cx="60" cy="60" r="59.5" class="filled" pathLength="1"/> <!-- pahtlength 1 veut dire la longueur du cercle vaut 100% et permet de mieux gérer les pointillés dans le css -->
+    </svg>
+    <span class="emoji">💖</span>
+</button>
+
+<script src="./app.js"></script>
+</body>
+</html>

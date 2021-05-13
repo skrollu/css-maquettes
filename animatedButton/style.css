@@ -1,0 +1,64 @@
+* {
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #222;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  position: relative;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.btn:hover {
+  transform: scale(1.5);
+}
+
+.btn:active {
+  transform: scale(2);
+}
+
+.emoji {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  will-change: transform; /* Permet au navigateur de rendre plsu smooth le rescale d'un texte (ici une émojie) à utiliser rarement car couteux en perf... */
+}
+
+.bg-svg {
+  stroke: #b8b8b834;
+  stroke-width: 3;
+}
+
+.filled {
+  stroke: #fff;
+  stroke-width: 3;
+  stroke-dasharray: 1; /* stroke-dasharray: 0.1; dit un pointillé tous les 10% si pathLength vaut 1 cf html */
+  stroke-dashoffset: 1;  /* stroke-dashoffset: 0.1; met un écart de 10% vers la droite */
+  transition: stroke-dashoffset 0.4s ease-in-out;
+}
+
+.btn:hover .filled {
+  stroke-dashoffset: 0;
+}
+
+svg {
+  transform: rotate(-90deg); /* rotate car le svg début à droite et l'animation est moins jolie*/
+}
