@@ -1,0 +1,28 @@
+* {
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 800px;
+  min-width: 80%;
+  background-color: cyan;
+}
+
+.container svg {
+  height: 100%;
+  width: 100%;
+}
+
+polygon {
+  fill: orangered; /* les attributs spécifiques au SVG peuvent être  changé via CSS*/
+}

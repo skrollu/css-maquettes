@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>SVG</title>
+</head>
+<body>
+    
+    <div class="container">
+        <svg height="500" width="500" stroke-width="1" stroke="black">
+            <!--         <rect x="50" y="50" width="100" height="100" fill="crimson"></rect>
+                <circle cx="50" cy="100" r="50" stroke="black" stroke-width="10" fill="green"></circle>
+                <path d="M 100 100 L 300 100 L 200 300 z" fill="pink" stroke-width="3" stroke="black" /> -->
+                <path d="M 5, 5 h 50 v 50 h -50 v -50" stroke-width="10" stroke="blue" />
+                <text x="5" y="100" font-size="40" font-family="sans-serif">0</text>
+                <path d="M 100 300 L 300 500" stroke-width="3" stroke="blue" />
+                <path d="M 400 400 l 0 300 m 50 -300 l 0 300 L 900 300 l 0 -300" stroke-width="3" stroke="blue" />
+                <path d="M 0 300 l 800 0" stroke-width="3" stroke="red" />
+                <path d="M 200 10 v 50" stroke-width="3" stroke="red" />
+                <path d="M 200 60 h 50" stroke-width="3" stroke="red"/>
+                <path d="M 200 10 l 50 50" stroke-width="3" stroke="red" />
+                <text x="250" y="60" font-size="40" font-family="sans-serif">1</text>
+                <path d="M 400 10 c 50, 0 50, 100 100, 100 50, 0 50, -100 100, -100" />
+                <path d="M 600 10 c 100, -50 60, 150 100, 100 50, 0 50, -10 100, -100" />
+                
+                <ellipse cx="250" cy="250" rx="50" ry="80" fill="orange"/>
+                <text x="250" y="250" font-size="40" font-family="sans-serif">2</text>
+                <polygon points="1000, 20 1000, 100 1200, 60"/>
+                <text x="1000" y="50" font-size="40" font-family="sans-serif">3</text>
+                
+                <g transform="translate(50,0)">
+                    <rect x="800" y="300" height="50" width="80" fill="red" stroke-width="0"/>
+                    <rect x="800" y="400" height="50" width="80" fill="red" stroke-width="0"/>
+                    <rect x="800" y="500" height="50" width="80" fill="red" stroke-width="0"/>
+                    <text x="800" y="450" font-size="40" font-family="sans-serif">4</text>
+                </g>
+            </svg>
+        </div>
+        <script src="./app.js"></script>
+    </body>
+    </html>
