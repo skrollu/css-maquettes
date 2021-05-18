@@ -64,7 +64,7 @@ section {
   width: 150%;
   margin-left: -10%;
   bottom: -35vh;
-  height: 50vh;
+  height: 65vh;
   background-color: rgb(0, 0, 0);
   filter: blur(20px);
   z-index: 1000;
@@ -89,7 +89,7 @@ section:nth-child(2) {
 }
 
 .album {
-  padding: 0 20px;
+  padding: 150px 20px;
   display: flex;
   flex-direction: column;
 }
