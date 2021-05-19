@@ -1,0 +1,94 @@
+* {
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background: rgba(0,0,0, 0.05)
+}
+
+.container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 75px;
+  font-size: 45px;
+  transition: 1s;
+  box-shadow: 0 0 5px rgba(0,0,0,0.25);
+  cursor: pointer;
+  border: none;
+  background: #fff;
+}
+
+#btn:hover {
+  box-shadow: 0 5px 35px 0 rgba(0,0,0,0.1);
+}
+
+#btn:hover::before,
+#btn:hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(#00ffb3, #5f002c);
+  border-radius: 75px;
+  animation: 1s jiggle infinite;
+}
+
+#btn:hover::after {
+  background-image: linear-gradient(#f3ce5e, #fda8cf);
+  animation: 1.2s jiggle infinite;
+}
+
+@keyframes jiggle {
+/*
+  8 phases
+  100/7 = 14
+*/
+
+  0% {
+    transform: translate(-5px, -5px);
+  }
+  14% {
+    transform: translate(0px, -5px);
+  }
+  28% {
+    transform: translate(5px, -5px);
+  }
+  42% {
+    transform: translate(5px, 0px);
+  }
+  57% {
+    transform: translate(5px, 5px);
+  }
+  71% {
+    transform: translate(0px, 5px);
+  }
+  85% {
+    transform: translate(-5px, 5px);
+  }
+  100% {
+    transform: translate(-5px, 0px);
+  }
+}
