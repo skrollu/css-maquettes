@@ -7,3 +7,14 @@
 html {
   font-size: 62.5%;
 }
+
+
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to top, #ccc, #fff);
+}
+
+header {
+  height: 50vh;
+}
