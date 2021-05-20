@@ -1,0 +1,68 @@
+* {
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+}
+
+.grid {
+display: flex;
+}
+
+.grid button {
+  margin: 30px;
+  border: none;
+  background: #fff;
+  height: 100px;
+  width: 100px;
+  font-size: 45px;
+  border-radius: 30px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#one {
+  box-shadow: inset 1px 1px 2px 2px rgba(0,0,0,0.1);
+}
+
+#one:hover {
+  box-shadow: inset 2px 2px 2px 2px rgba(0,0,0,0.1), inset -1px -1px  1px 2px rgba(0,0,0,0.1);
+}
+
+#two {
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
+}
+
+#two:hover {
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+#three {
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.048), rgba(255, 255, 255, 0));
+  box-shadow: -1px -1px 1px 0px white;
+}
+
+#three:hover {
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.02), rgba(255, 255, 255, 0));
+  box-shadow: none;
+}
+
+#four {
+  box-shadow: inset 4px 4px rgba(0, 0, 0, 0.2), 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+#four:hover {
+  transform: rotateY(-45deg);
+  box-shadow: inset 20px 20px rgba(0, 0, 0, 0.2), 15px 15px rgba(0, 0, 0, 0.3);
+}
