@@ -7,3 +7,14 @@
 html {
   font-size: 62.5%;
 }
+
+body {
+  height: 100vh;
+  /* background: #000; */
+  background-color: #fff
+}
+
+canvas {
+  color: blue ;
+  background-color: red;
+}
