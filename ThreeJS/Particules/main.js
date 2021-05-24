@@ -49,7 +49,7 @@ const lineMaterial = new LineBasicMaterial({
   depthWrite: false
 })
 const lineObject = new Line(geometry, lineMaterial);
-group.add(lineObject)
+group.add(lineObject);
 
 /* group.add(new Mesh(
   new SphereBufferGeometry(),

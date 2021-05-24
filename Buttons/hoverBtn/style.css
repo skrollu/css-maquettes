@@ -1,0 +1,90 @@
+* {
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #CCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+button {
+  margin: 10px;
+  position: relative;
+  background: none;
+  outline: none;
+  padding: 50px;
+  border: 2px solid rgb(8, 8, 119);
+  background-color: white;
+  cursor: pointer;
+}
+
+#one::before,
+#one::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  height: 50%;
+  width: 100%;
+  background: rgb(8, 8, 119);
+  transition: 0.5s;
+}
+
+#one::before {
+  top: 0;
+  left: 0;
+}
+
+#one::after {
+  bottom: 0;
+  left: 0;
+}
+
+#one:hover::before,
+#one:hover::after {
+  height: 0;
+}
+
+/* TWO */
+#two {
+  overflow: hidden;
+}
+
+#two {
+  background-color: blue;
+  color: white;
+}
+
+#two::before,
+#two::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  height: 50%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+
+#two::before {
+  top: 0;
+  left: 0;
+}
+
+#two::after {
+  bottom: 0;
+  left: 0;
+}
+
+#two:hover::before,
+#two:hover::after {
+  height: 0;
+}
