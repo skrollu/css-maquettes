@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  height: 80vh;
+  overflow: hidden;
+}
+canvas {
+  display: block;
+}
+
+.three-app h1 {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  font-family: "Montserrat";
+  font-size: 7em;
+  text-transform: uppercase;
+  width: auto;
+  line-height: 0.8em;
+  border: 5px solid black;
+  padding: 0.2em;
+}
