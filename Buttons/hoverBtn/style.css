@@ -8,15 +8,123 @@ html {
   font-size: 62.5%;
 }
 
+
 body {
-  background: #CCC;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  flex-direction: column;
 }
 
-button {
+section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ICON SECTION */
+.icon-section {
+  width: 100%;
+  background-color: #111;
+}
+
+.icon-section ul {
+  list-style: none;
+  display: flex;
+}
+
+.icon-section ul li { 
+  padding: 0;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.icon-section ul li a {
+  text-decoration: none;
+  color: rgb(75, 75, 75);
+}
+
+.icon-section ul li {
+  position: relative;
+  font-size: 4rem;
+}
+
+.icon-section ul li::before {
+  font-family: fontAwesome;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  font-size: 4rem;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.icon-section ul li:hover::before {
+  height: 100%;
+}
+
+.icon-section  ul li:nth-child(1)::before {
+  content: '\f099';
+  color: aqua;
+  border-bottom: 4px solid aqua;
+}
+
+.icon-section  ul li:nth-child(2)::before {
+  content: '\f232';
+  color: greenyellow;
+  border-bottom: 4px solid greenyellow;
+}
+
+.icon-section  ul li:nth-child(3)::before {
+  content: '\f167';
+  color: red;
+  border-bottom: 4px solid red;
+}
+
+
+/* 
+.icon-section ul li a .fab:hover {
+  
+}
+
+.icon-section ul li  a .fab::before {
+  font-family: fontAwesome;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 4rem;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.icon-section  ul li:nth-child(1) a .fab:before {
+  content: '\f099';
+  color: aqua;
+}
+
+
+.icon-section  ul li:nth-child(2) a .fab:before {
+  content: '\f232';
+  color: greenyellow;
+}
+
+
+.icon-section  ul li:nth-child(3) a .fab:before {
+  content: '\f167';
+  color: red;
+}
+
+*/
+
+/* ALTEN SECTION */
+.alten-btn {
+  width: 100%;
+  background: #CCC;
+}
+
+.alten-btn button {
   margin: 10px;
   position: relative;
   background: none;
@@ -27,8 +135,8 @@ button {
   cursor: pointer;
 }
 
-#one::before,
-#one::after {
+.alten-btn #one::before,
+.alten-btn #one::after {
   content: '';
   position: absolute;
   z-index: 1;
@@ -38,33 +146,33 @@ button {
   transition: 0.5s;
 }
 
-#one::before {
+.alten-btn #one::before {
   top: 0;
   left: 0;
 }
 
-#one::after {
+.alten-btn #one::after {
   bottom: 0;
   left: 0;
 }
 
-#one:hover::before,
-#one:hover::after {
+.alten-btn #one:hover::before,
+.alten-btn #one:hover::after {
   height: 0;
 }
 
 /* TWO */
-#two {
+.alten-btn #two {
   overflow: hidden;
 }
 
-#two {
+.alten-btn #two {
   background-color: blue;
   color: white;
 }
 
-#two::before,
-#two::after {
+.alten-btn #two::before,
+.alten-btn #two::after {
   content: '';
   position: absolute;
   z-index: 1;
@@ -74,17 +182,17 @@ button {
   transition: 0.5s;
 }
 
-#two::before {
+.alten-btn #two::before {
   top: 0;
   left: 0;
 }
 
-#two::after {
+.alten-btn #two::after {
   bottom: 0;
   left: 0;
 }
 
-#two:hover::before,
-#two:hover::after {
+.alten-btn #two:hover::before,
+.alten-btn #two:hover::after {
   height: 0;
 }
