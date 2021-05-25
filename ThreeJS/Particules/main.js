@@ -89,7 +89,7 @@ group.add(lineObject);
     
     renderer.render(scene, camera)
     //controls.update()
-    requestAnimationFrame(tick)
+    requestAnimationFrame(tick) // mieux que setInterval de js car prend en compte le fait detre sur un atre onglet pour eco les perfs
   }
   
   tick();
