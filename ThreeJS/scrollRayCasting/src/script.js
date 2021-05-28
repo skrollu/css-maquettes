@@ -1,7 +1,8 @@
 import './style.css'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
-import { Mesh, MeshBasicMaterial, PlaneBufferGeometry, TextureLoader, WebGLRenderer, Vector2, Scene, PointLight, PerspectiveCamera, Clock, Raycaster } from 'three'
+import { Mesh, MeshBasicMaterial, PlaneBufferGeometry, TextureLoader, WebGLRenderer, Vector2, Scene, PointLight, PerspectiveCamera, Clock, Raycaster } from 'three';
+import gsap from 'gsap';
 
 //texture Loader
 const textureLoader = new TextureLoader()
@@ -30,7 +31,8 @@ let objs = []
 
 scene.traverse(object => {
     if (object.isMesh) {
-        console.log(object)
+        //console.log(object)
+        objs.push(object);
     }
 })
 
@@ -96,7 +98,8 @@ let y = 0;
 let position = 0;
 
 function onMouseWheel(event) {
-    y = event.deltaY * 0.0007;}
+    y = event.deltaY * 0.0007;
+}
 
 /**
  * Animate
@@ -112,7 +115,6 @@ const clock = new Clock()
 
 const tick = () =>
 {
-
     const elapsedTime = clock.getElapsedTime()
 
     // Update objects
@@ -126,14 +128,18 @@ const tick = () =>
     const intersects = raycaster.intersectObjects(objs);
     for(const intersect of intersects) {
         //console.log('intersected')
-        intersect.object.scale.set(1.1, 1.1)
-
+        //intersect.object.scale.set(1.1, 1.1)
+        gsap.to(intersect.object.scale, {duration: 1, x: 1.7, y: 1.7})
+        gsap.to(intersect.object.rotation, {duration: .3, y: -.5})
+        gsap.to(intersect.object.position, {duration: 1, z: 0.9})
     }
 
     for(const object of objs) {
         if(!intersects.find(intersect => intersect.object === object)) {
             //console.log('not intersected')
-            object.position.scale.set(1, 1)
+            gsap.to(object.scale, {duration: 1, x: 1, y: 1})
+            gsap.to(object.rotation, {duration: .3, y: 0})
+            gsap.to(object.position, {duration: 1, z: 0})
         }
     }
     // Update Orbital Controls
