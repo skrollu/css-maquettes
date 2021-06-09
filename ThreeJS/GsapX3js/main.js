@@ -72,7 +72,7 @@ function onMouseMove(event) {
   var intersects = raycaster.intersectObjects(scene.children, true);
   for (var i = 0; i < intersects.length; i++) {
     this.tl = new TimelineMax();
-    this.tl.to(intersects[i].object.scale, 1, { x: 2, ease: Expo.easeOut })
+    this.tl.to(intersects[i].object.scale, { duration: .1, x: 2, ease: Expo.easeOut })
     this.tl.to(intersects[i].object.scale, .5, { x: .5, ease: Expo.easeOut })
     this.tl.to(intersects[i].object.position, .5, { x: 2, ease: Expo.easeOut })
     this.tl.to(intersects[i].object.rotation, .5, { y: Math.PI * .5, ease: Expo.easeOut }, "=-1.5")
