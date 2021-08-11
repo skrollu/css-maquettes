@@ -8,15 +8,17 @@ html {
   font-size: 62.5%;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 200px);
-  width: 100%;
-  justify-content: center;
-  gap: 10px;
+video {
+  position: absolute;
+  z-index: 10;
+  visibility: hidden;
 }
 
-.grid-element {
-  text-align: center;
-  background-color: red;
+canvas {
+  border: 1px solid #b9b9b9;
+  border-radius: 3px;
+  background: #f1f1f1;
+  z-index: 100;
+  display: block;
+  margin: 75px auto;
 }
