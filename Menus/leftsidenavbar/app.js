@@ -22,7 +22,7 @@ closeBtn.addEventListener("click", () => {
     openBtn.style.opacity = '1'
 });
 
-mainContent.addEventListener('click', () => {
+menu.addEventListener('click', () => {
     if(menuIsOpen === 1) {
         menuIsOpen = 0;
         menu.style.transform = `translateX(-${300}px)`;
