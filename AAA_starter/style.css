@@ -7,16 +7,3 @@
 html {
   font-size: 62.5%;
 }
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 200px);
-  width: 100%;
-  justify-content: center;
-  gap: 10px;
-}
-
-.grid-element {
-  text-align: center;
-  background-color: red;
-}
