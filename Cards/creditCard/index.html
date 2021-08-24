@@ -6,19 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
     <title>Credit flip card</title>
 </head>
 <body>
     
     <div class="container">
-        <div class="card">
-            <div class="card-face card-front">
-                <h1>Face avant</h1>
+        <form>
+            <div class="card">
+                <div class="card-face card-front">
+                    <img src="./images/MasterCard_Logo.svg.png">
+                    <div class="puce"></div>
+                    <div class="card-number">
+                        <label for="number">Card number</label>
+                        <input id="number" type="text">
+                    </div>
+                    <div class="card-name">
+                        <label for="name">Name</label>
+                        <input id="name" type="text">
+                        <label for="surname">Surname</label>
+                        <input id="surname" type="text">
+                    </div>
+                </div>
+                <div class="card-face card-back">
+                    <div class="line"></div>
+                    <div class="grey-line">
+                        <div class="crypto">
+                            <label for="crypto">Cryptogram</label>
+                            <input id="crypto" type="text">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card-face card-back">
-                <h1>Face arrière</h1>
-            </div>
-        </div>
+        </form>
     </div>
 
     <script src="./app.js"></script>

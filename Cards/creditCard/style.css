@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -40,7 +41,7 @@ html {
   background-size: cover; /* case of image */
 }
 
- .card-back {
+.card-back {
   background-image: radial-gradient(circle at 85% 1%, rgba(237,237,237, 0.05) 0%, rgba(237,237,237, 0.05) 96%,transparent 96%, transparent 100%),radial-gradient(circle at 14% 15%, rgba(237,237,237, 0.05) 0%, rgba(237,237,237, 0.05) 1%,transparent 1%, transparent 100%),radial-gradient(circle at 60% 90%, rgba(237,237,237, 0.05) 0%, rgba(237,237,237, 0.05) 20%,transparent 20%, transparent 100%),radial-gradient(circle at 79% 7%, rgba(237,237,237, 0.05) 0%, rgba(237,237,237, 0.05) 78%,transparent 78%, transparent 100%),radial-gradient(circle at 55% 65%, rgba(237,237,237, 0.05) 0%, rgba(237,237,237, 0.05) 52%,transparent 52%, transparent 100%),linear-gradient(135deg, rgb(222,37,146),rgb(98,96,244));
   background-size: cover; /* case of image */
   transform: rotateY(180deg); /*  */
@@ -48,4 +49,84 @@ html {
 
 .card.flip {
   transform: rotateY(180deg);
+}
+
+/*  styling the card front   */
+
+.card-front img {
+  position: absolute;
+  top: 50px;
+  right: 35px;
+  height: 75px;
+}
+
+.card-front .puce {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  height: 50px;
+  width: 100px;
+  border-radius: 3px;
+  background-color: goldenrod;
+}
+
+.card-front .card-number {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 4.5fr;
+  align-items: flex-end;
+  top: 60%;
+  left: 50%;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.card-front .card-name {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-end;
+  top: 80%;
+  left: 50%;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.card-front .card-name input {
+  width: 180px;
+}
+
+/*  styling the card back   */
+
+.card-back .line {
+  position: absolute;
+  top:20%;
+  height: 50px;
+  width: 100%;
+  background-color: #222222;
+}
+
+.card-back .grey-line {
+  position: absolute;
+  top:40%;
+  left: 10%;
+  height: 50px;
+  width: 50%;
+  background-color: #acacac;
+}
+
+
+.card-back .grey-line .crypto {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transform: translate(0, -50%);
 }
