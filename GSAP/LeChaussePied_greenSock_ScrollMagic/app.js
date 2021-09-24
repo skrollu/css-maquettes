@@ -23,11 +23,11 @@ var scene = new ScrollMagic.Scene({
     reverse: false,
     triggerHook: 0.5 //position du trigger sur l'écran valeur en tre 0 (haut) et  1(bas) 0.5 = milieu
 })
-    .addIndicators({
+    /*.addIndicators({
         name: 'Reebook img',
         indent: 200,
         colorStart: 'red'
-    })
+    })*/
     .setPin('animate1') // pins the element for the the scene's duration
     .setTween(tween)
     .addTo(controller); // assign the scene to the controller
@@ -39,11 +39,11 @@ var scene2 = new ScrollMagic.Scene({
     reverse: false,
     triggerHook: 0.5 //position du trigger sur l'écran valeur en tre 0 (haut) et  1(bas) 0.5 = milieu
 })
-    .addIndicators({
+    /*.addIndicators({
         name: 'Lacoste img',
         indent: 200,
         colorStart: 'green'
-    })
+    })*/
     .setPin('animate2') // pins the element for the the scene's duration
     .setTween(tween2)
     .addTo(controller); // assign the scene to the controller
@@ -55,11 +55,11 @@ var scene3 = new ScrollMagic.Scene({
     //reverse: false,
     triggerHook: 0.5 //position du trigger sur l'écran valeur en tre 0 (haut) et  1(bas) 0.5 = milieu
 })
-    .addIndicators({
+    /*.addIndicators({
         name: 'Ree LI',
         indent: 100,
         colorStart: 'blue'
-    })
+    })*/
     .setPin('reeLi') // pins the element for the the scene's duration
     .setTween(tween3)
     .addTo(controller); // assign the scene to the controller
@@ -70,11 +70,11 @@ var scene3 = new ScrollMagic.Scene({
     //reverse: false,
     triggerHook: 0.5 //position du trigger sur l'écran valeur en tre 0 (haut) et  1(bas) 0.5 = milieu
 })
-    .addIndicators({
+    /*.addIndicators({
         name: 'BTN',
         indent: 100,
         colorStart: 'green'
-    })
+    })*/
     .setPin('btn') // pins the element for the the scene's duration
     .setTween(tween4)
     .addTo(controller); // assign the scene to the controller

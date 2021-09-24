@@ -5,11 +5,11 @@ var scene = new ScrollMagic.Scene({
     reverse: false
 })
 .setClassToggle('.box1', 'fade-in')
-.addIndicators({
+/*.addIndicators({
     name: 'INDICATIONS',
     indent: 200,
     colorStart: '#fff'
-})
+})*/
 .addTo(controller)
 
 var scene2 = new ScrollMagic.Scene({
@@ -17,11 +17,11 @@ var scene2 = new ScrollMagic.Scene({
     reverse: false
 })
 .setClassToggle('.box2', 'fade-in')
-.addIndicators({
+/*.addIndicators({
     name: 'INDICATIONS',
     indent: 200,
     colorStart: '#fff'
-})
+})*/
 .addTo(controller)
 
 var scene3 = new ScrollMagic.Scene({
@@ -29,9 +29,9 @@ var scene3 = new ScrollMagic.Scene({
     reverse: false
 })
 .setClassToggle('.box3', 'fade-in')
-.addIndicators({
+/*.addIndicators({
     name: 'INDICATIONS',
     indent: 200,
     colorStart: '#fff'
-})
+})*/
 .addTo(controller)
