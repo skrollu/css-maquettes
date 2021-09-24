@@ -6,6 +6,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(53, 1, 122);
 }
 
 .container {
@@ -44,15 +45,20 @@ body {
     padding: 5px 5px 5px 25px;
 }
 
-.drop-down ul li:nth-child(3) {
+.drop-down ul li:hover {
+    border-radius: 5px;
+    background:  rgb(137, 111, 250);
+}
+
+.drop-down ul li:nth-child(7) {
     padding-bottom: 15px;
 }
 
 .drop-down ul li a {
-    color: #f1f1f1;
+    color: #c2c2c2;
     text-decoration:  none;
 }
 
-.drop-down ul li a:hover {
-    color: #ffffff;
+.drop-down ul li:hover a {
+    color: #fff;
 }
