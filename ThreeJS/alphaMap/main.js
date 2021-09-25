@@ -12,7 +12,7 @@ const alpha = loader.load('./img/alpha.png')
 const texture = loader.load('./img/texture.jpg')
 
 // Debug
-const gui = new dat.GUI()
+//const gui = new dat.GUI()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -25,7 +25,7 @@ const geometry = new THREE.PlaneBufferGeometry(2,2,64,64)
 const material = new THREE.MeshStandardMaterial({
   color: "gray",
   map: texture,
-  displacementMap: height2,
+  displacementMap: height3,
   displacementScale: .4,
   alphaMap: alpha,
   transparent: true,
