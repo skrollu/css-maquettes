@@ -1,0 +1,83 @@
+* {
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+nav {
+  height: 100vh;
+  background-color: rgb(5, 0, 48);
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  flex-direction: column;
+  padding: 10% 20%;
+}
+
+nav .link {
+  position: relative;
+  font-size: 4rem;
+  font-family: 'Roboto';
+  color: white;
+}
+
+nav .link,
+nav .link:visited {
+  text-decoration: none;
+}
+
+
+nav ul li .link::before,
+nav ul li .link::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+
+nav ul li .link:hover::before {
+  top: -10px;
+  left: 30px;
+  color: red;
+}
+
+nav ul li .link:hover::after {
+  top: -20px;
+  left: 60px;
+  color: green;
+}
+
+/** Menu */
+nav ul li:nth-child(1) .link::before,
+nav ul li:nth-child(1) .link::after {
+  content: 'Menu';
+}
+
+/** Contact */
+nav ul li:nth-child(2) .link::before,
+nav ul li:nth-child(2) .link::after {
+  content: 'Contact';
+}
+/** Portfolio */
+nav ul li:nth-child(3) .link::before,
+nav ul li:nth-child(3) .link::after {
+  content: 'Portfolio';
+}
+/** About */
+nav ul li:nth-child(4) .link::before,
+nav ul li:nth-child(4) .link::after {
+  content: 'About';
+}
+/** Link */
+nav ul li:nth-child(5) .link::before,
+nav ul li:nth-child(5) .link::after {
+  content: 'Link';
+}
