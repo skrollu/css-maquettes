@@ -8,9 +8,24 @@ html {
   font-size: 62.5%;
 }
 
-nav {
+img {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
   height: 100vh;
-  background-color: rgb(5, 0, 48);
+  width: 100%;
+  object-fit: cover;
+}
+
+nav {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(2, 0, 15);
 }
 
 nav ul {
@@ -20,13 +35,21 @@ nav ul {
   align-items: left;
   flex-direction: column;
   padding: 10% 20%;
+  list-style: none;
 }
 
 nav .link {
   position: relative;
-  font-size: 4rem;
+  font-size: 8rem;
+  font-weight: 900;
   font-family: 'Roboto';
-  color: white;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff; /* contour du text*/
+  transition: color 0.3s;
+}
+
+nav .link:hover {
+  color: #fff;
 }
 
 nav .link,
@@ -41,18 +64,20 @@ nav ul li .link::after {
   top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
+  -webkit-text-stroke: 0px; /* contour du text*/
 }
 
 nav ul li .link:hover::before {
-  top: -10px;
-  left: 30px;
+  top: -7px;
+  left: 7px;
   color: red;
 }
 
 nav ul li .link:hover::after {
-  top: -20px;
-  left: 60px;
-  color: green;
+  top: -14px;
+  left: 14px;
+  color: rgb(35, 167, 255);
+  -webkit-text-stroke: 1px #000; /* contour du text*/
 }
 
 /** Menu */
