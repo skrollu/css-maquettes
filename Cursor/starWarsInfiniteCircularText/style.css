@@ -1,0 +1,62 @@
+:root {
+	--font-size: 3rem;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Courier New", Courier, monospace;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+section {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: rgb(145, 145, 145);
+	overflow: hidden;
+}
+
+section .text {
+	position: absolute;
+	animation: rotate 7.5s infinite linear;
+}
+
+section .text .plain-text {
+	color: rgb(0, 0, 0);
+	font-size: var(--font-size);
+	user-select: none;
+	pointer-events: none;
+}
+
+section .text .img-text {
+	height: var(--font-size);
+	/* width: 2.5rem; */
+	/*filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);*/
+}
+
+section .text .letter {
+	position: absolute;
+	top: -200px;
+	transform-origin: 0 200px;
+}
+
+section .text .plain-text .letter {
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
