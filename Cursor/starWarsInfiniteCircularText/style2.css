@@ -25,38 +25,13 @@ section {
 
 section .text {
 	position: absolute;
-	/* animation: rotate 7.5s infinite linear; */
 }
 
-section .text .plain-text {
-	color: rgb(0, 0, 0);
-	font-size: var(--font-size);
-	user-select: none;
-	pointer-events: none;
+section .text .letter {
 }
 
 section .text .img-text {
 	height: var(--font-size);
-	width: 2.5rem;
+	margin
 	/*filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);*/
-}
-
-section .text .letter {
-	position: absolute;
-	top: -300px;
-	transform-origin: 0 300px;
-}
-
-section .text .plain-text .letter {
-	display: inline-block;
-	text-transform: uppercase;
-}
-
-@keyframes rotate {
-	0% {
-		transform: rotate(360deg);
-	}
-	100% {
-		transform: rotate(0deg);
-	}
 }

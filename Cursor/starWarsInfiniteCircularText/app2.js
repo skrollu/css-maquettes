@@ -1,7 +1,4 @@
 //split plain text in span
-const plainText = document.querySelector(".plain-text");
-plainText.innerHTML = plainText.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
 const letters = document.querySelectorAll(".letter");
 const numberOfLetters = letters.length;
 const circleSize = 360; //360 deg in a circle
