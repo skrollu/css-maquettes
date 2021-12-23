@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 10rem;
+    border: solid 1px rgb(233, 233, 233);
+}
+
+header nav {
+    height: 100%;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav ul li {
+    list-style-type: none;
+    font-size: 3rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#section-one {
+    display: flex;
+    margin: 5% 3%;
+}
+
+#section-one .left {
+    width: 40%;
+    background-color: red;
+
+}
+
+#section-one .left .title {
+    width: 100%;
+    position: relative;
+    font-size: 8rem;
+    overflow: hidden;
+}
+
+#section-one .left .title h1 {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+#section-one .left .title:nth-child(1) h1 {
+    animation: animate 0.3s forwards 0.1s;
+}
+#section-one .left .title:nth-child(2) h1 {
+    animation: animate 0.3s forwards 0.3s;
+}
+#section-one .left .title:nth-child(3) h1{
+    animation: animate 0.3s forwards 0.5s;
+}
+
+@keyframes animate {
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+#section-one .right {
+    width: 60%;
+    background-color: green;
+}
+
+#section-one .right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#section-one .right .card {
+    height: 100%;
+    overflow: hidden;
+}
+
+#section-one .right .card:hover {
+    width: 100%;
+}
+
+#section-one .right .card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
