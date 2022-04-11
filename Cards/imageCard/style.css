@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+.img-shadow {
+  position: relative;
+  max-width: 100%;
+  float: left;
+}
+
+.img-shadow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  box-shadow: inset 1rem 0 8px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 1rem 0 8px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: inset 1rem 0 8px rgba(0, 0, 0, 0.6);
+}
+.img-shadow img {
+  float: left;
+}
