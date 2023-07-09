@@ -1,70 +1,53 @@
 import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
-function main() {
-	const canvas = document.querySelector("#c");
-	const renderer = new THREE.WebGLRenderer({ antialias: true, canvas });
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-	const fov = 75;
-	const aspect = 2; // the canvas default
-	const near = 0.1;
-	const far = 5;
-	const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-	camera.position.z = 2;
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
 
-	const scene = new THREE.Scene();
+// const geometry = new THREE.BoxGeometry(1, 1, 1);
+// const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+// const cube = new THREE.Mesh(geometry);
+// scene.add(cube);
 
-	{
-		const color = 0xffffff;
-		const intensity = 1;
-		const light = new THREE.DirectionalLight(color, intensity);
-		light.position.set(-1, 2, 4);
-		scene.add(light);
+camera.position.z = 2;
+camera.position.x = 0.5;
+camera.position.y = 0.5;
+camera.lookAt(new THREE.Vector3(0, 0, 0));
+
+const loader = new GLTFLoader();
+let mesh;
+
+loader.load(
+	"./assets/mya-wing/scene.glb",
+	function (gltf) {
+		mesh = gltf.scene.children[0];
+		scene.add(gltf.scene);
+	},
+	undefined,
+	function (error) {
+		console.error("error", error);
 	}
+);
 
-	const boxWidth = 1;
-	const boxHeight = 1;
-	const boxDepth = 1;
-	const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+// Light
+const light = new THREE.DirectionalLight(0xffffff, 1);
+light.position.set(2, 2, 5);
+scene.add(light);
 
-	function makeInstance(geometry, color, x) {
-		const material = new THREE.MeshPhongMaterial({ color });
+function animate() {
+	requestAnimationFrame(animate);
 
-		const cube = new THREE.Mesh(geometry, material);
-		scene.add(cube);
+	mesh.rotation.y += 0.01;
+	// cube.rotation.x += 0.01;
+	// cube.rotation.y += 0.01;
 
-		cube.position.x = x;
-
-		return cube;
-	}
-
-	const cubes = [
-		makeInstance(geometry, 0x44aa88, 0),
-		makeInstance(geometry, 0x8844aa, -2),
-		makeInstance(geometry, 0xaa8844, 2),
-	];
-
-	function render(time) {
-		time *= 0.001; // convert time to seconds
-
-		cubes.forEach((cube, ndx) => {
-			const speed = 1 + ndx * 0.1;
-			const rot = time * speed;
-			cube.rotation.x = rot;
-			cube.rotation.y = rot;
-		});
-
-		renderer.render(scene, camera);
-
-		requestAnimationFrame(render);
-	}
-	requestAnimationFrame(render);
+	renderer.render(scene, camera);
 }
 
-main();
+animate();
 
-/* const importModel = () => {
-	const gltLoader = new GLTFLoader();
-	gltLoader.load("./assets/scene.gltf", (scene) => {});
-};
- */
+renderer.render(scene, camera);
