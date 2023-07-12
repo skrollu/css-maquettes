@@ -1,0 +1,50 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+html,
+body {
+	margin: 0;
+	height: 100%;
+}
+
+body {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("assets/images/stars_background.jpg");
+}
+
+#feed {
+	position: relative;
+	margin: 0 10%;
+}
+
+.card-container {
+	margin: 2rem 0;
+}
+.card {
+	/* Glassmorphism effect */
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+
+	padding: 2rem 2rem;
+	height: 900px;
+}
+
+.card-screen {
+	height: 100%;
+	width: 100%;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	display: block;
+}
