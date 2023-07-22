@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./style.css" />
-		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:700|Poppins"> -->
-		<!-- GSAP: Contain Tween and Timeline -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
-			integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
-			crossorigin="anonymous"
-		></script>
-		<!-- ScrollMagic -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
-			integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
-			crossorigin="anonymous"
-		></script>
-		<!-- ScrollMagic: Allow to combine Gsap an Scroll Magic -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"
-			integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww=="
-			crossorigin="anonymous"
-		></script>
-		<title>Starshipshop Card</title>
-	</head>
-	<body>
-		<main id="feed">
-			<div class="card-container">
-				<div class="card">
-					<canvas class="card-screen"></canvas>
-				</div>
-			</div>
-			<!-- 			<div class="card-container">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:700|Poppins"> -->
+    <!-- GSAP: Contain Tween and Timeline -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+        integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+        crossorigin="anonymous"></script>
+    <!-- ScrollMagic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+        integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+        crossorigin="anonymous"></script>
+    <!-- ScrollMagic: Allow to combine Gsap an Scroll Magic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"
+        integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww=="
+        crossorigin="anonymous"></script>
+    <title>Starshipshop Card</title>
+</head>
+
+<body>
+    <main id="feed">
+        <div class="rotate-container">
+
+            <div class="card">
+                <div class="face front">
+                    <div class="glow"></div>
+                    <canvas class="screen">
+                    </canvas>
+                    <div class="info-container">
+                        <ul>
+                            <li><span class="info-title">height:</span> 4.56m</li>
+                            <li><span class="info-title">length:</span> 10.0m</li>
+                            <li><span class="info-title">width:</span> 9.0m</li>
+                            <li><span class="info-title">weight:</span> 2.35 tons</li>
+                            <li><span class="info-title">engine:</span> 9.0m</li>
+                            <li><span class="info-title">weapons:</span> 9.0m</li>
+                            <li><span class="info-title">hyperdrive:</span> 9.0m</li>
+                            <li><span class="info-title">manufacturer:</span> 9.0m</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="face back"></div>
+                <div class="face top"></div>
+                <div class="face bottom"></div>
+                <div class="face left"></div>
+                <div class="face right"></div>
+            </div>
+        </div>
+        <!-- 			<div class="card-container">
 				<div class="card">
 					<canvas class="card-screen"></canvas>
 				</div>
@@ -43,8 +61,10 @@
 					<canvas class="card-screen"></canvas>
 				</div>
 			</div> -->
-		</main>
+    </main>
 
-		<script type="module" src="/app.js"></script>
-	</body>
+    <script type="module" src="/threeModel.js"></script>
+    <script type="module" src="/card.js"></script>
+</body>
+
 </html>
