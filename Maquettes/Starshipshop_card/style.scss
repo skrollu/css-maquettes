@@ -32,23 +32,28 @@ body {
 
 .rotate-container {
     padding: 2rem;
+    transition: transform .1s ease;
 }
+
 .card {
     position: relative;
     width: $card-width;
     height: $card-height;
     transform-style: preserve-3d;
-        transition: transform .3s ease;
-    }
+}
 
 .face {
     position: absolute;
     height: 100%;
     width: 100%;
-    
-    background-color: rgba(255, 255, 255, 0.05);
+
+    /*Glassmorphism From https://css.glass */
+    background: rgba(255, 255, 255, 0.055);
+    // border-radius: 16px;
     backdrop-filter: blur(1px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .front {
@@ -89,37 +94,12 @@ body {
     transform: rotateY(90deg) translateZ(50px);
 }
 
-.front {
-    // position: relative;
-    // overflow: hidden;
-
-    // Glassmorphism effect
-    // background: rgba(255, 255, 255, 0.05);
-    // border-radius: 16px;
-    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 1px 5px #00000099;
-    // backdrop-filter: blur(1px);
-    // -webkit-backdrop-filter: blur(2px);
-    // border: 1px solid rgba(255, 255, 255, 0.1);
-
-
-    // transition-duration: 300ms;
-    // transition-property: transform, box-shadow;
-    // transition-timing-function: ease-out;
-    // transform: rotate3d(0);
-    padding: 2rem 2rem;
-}
 
 .screen {
     height: 100%;
     width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     display: block;
 }
-
-// .card:hover {
-//     transition-duration: 150ms;
-//     box-shadow: 0 5px 20px 5px #00000044;
-// }
 
 .card .glow {
     position: absolute;
@@ -127,8 +107,7 @@ body {
     height: 100%;
     left: 0;
     top: 0;
-
-    background-image: radial-gradient(circle at 50% -20%, #ffffff10, #0000000f);
+    background-image: radial-gradient(circle at center, #ffffff15, #0000000f, #ffffff15 15%, transparent 20%);
 }
 
 .card .info-container {
